@@ -88,4 +88,13 @@ Example:
 The ResponseEntity class is part of the Spring Framework and is commonly used in Spring Boot applications to customize the HTTP response.  
 It provides methods for setting the response status, headers, and body. You can use it to return different types of data in your controller methods, such as JSON, XML, or even HTML.  
 You can use generics with ResponseEntity to specify the type of data you are returning.  
+  
+## L 13  
+### Lombok  
+Lombok is a popular library in the Java ecosystem, often used in Spring Boot applications.  
+It aims to reduce the boilerplate code that developers have to write, such as getters, setters, constructors, and more.  
+Lombok achieves this by generating this code automatically during compilation, based on annotations you add to your Java classes.  
+Lombok generates bytecode for methods like getters, setters, constructors, equals(), hashCode(), and toString(), as specified by the annotations used in your code. This generated code is added to the compiled class files (.class files).  
+The Java Compiler compiles your classes, including the generated code. This means that the generated methods become part of your compiled class files.  
+When you run your application, the generated methods are available for use, just like any other methods in your classes.  
 
