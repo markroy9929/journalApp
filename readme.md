@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 20
+Completed till Lecture/Video:  # 23
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "add auth April 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit April 2025"; git push;
 ```
 
 ### [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)

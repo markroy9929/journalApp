@@ -154,4 +154,10 @@ A repository UserRepository to interact with MongoDB.
 UserDetailsService implementation to fetch user details.  
 A configuration SecurityConfig to integrate everything with Spring Security.  
   
-## L   
+## L 22  
+### Class Path  
+Class Path is a list of jar(s) and directories, which are used by JVM, JVM needs bytecode, bytecode is stored in class path, class path is a method of telling JVM that here are files, find here.  
+Class path contains .class files, jars, configuration files.  
+application.properties syntax is key=value, we can give configurations by another method YAML.  
+### YAML  
+YAML ain't markup language, file ext .yml  
