@@ -161,3 +161,8 @@ Class path contains .class files, jars, configuration files.
 application.properties syntax is key=value, we can give configurations by another method YAML.  
 ### YAML  
 YAML ain't markup language, file ext .yml  
+  
+## L 24  
+There are two types of testing: Unit testing and Integration testing.  
+Unit testing ka matlab hai, ki jaise koi API banai hai, usme multiple components hai, like 4 function = 4 conponents, multiple components ki individual testing, is called test driven development.  
+### JUnit- Java Unit  
