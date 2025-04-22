@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 26
+Completed till Lecture/Video:  # 27
   
 run daily:
 ```
-    c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit April 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 22 April 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -68,4 +68,30 @@ git push -u origin main
 | 46 | [How to Integrate Swagger in Spring Boot \| Step-by-Step Tutorial](https://www.youtube.com/watch?v=7QlvGBJ9Tng) |
 | 47 | [OAuth2 in Spring Boot \| How to Add Google Login in Spring Boot \| Complete Tutorial](https://www.youtube.com/watch?v=cRiqZ0j1gEM) |
 
+  
+
+> Course Deadline was 22 April 2025,
+> After extension need to finish by 12 May
+  
+> extension Calendar-
+> 23 April:
+> 24 April:
+> 25 April:
+> 26 April:
+> 27 April:
+> 28 April:
+> 29 April:
+> 30 April:
+> 1 May:
+> 2 May:
+> 3 May:
+> 4 May:
+> 5 May:
+> 6 May:
+> 7 May:
+> 8 May:
+> 9 May:
+> 10 May:
+> 11 May:
+> 12 May: TO BE FINISHED **
   
