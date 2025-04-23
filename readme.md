@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 27
+Completed till Lecture/Video:  # 28
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 22 April 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 23 April 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -74,7 +74,7 @@ git push -u origin main
 > After extension need to finish by 12 May
   
 > extension Calendar-
-> 23 April:
+> 23 April: done #27 @ 5pm , learned everything about Logback.xml and Logback,SLF4J...
 > 24 April:
 > 25 April:
 > 26 April:

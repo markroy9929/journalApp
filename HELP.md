@@ -166,3 +166,38 @@ YAML ain't markup language, file ext .yml
 There are two types of testing: Unit testing and Integration testing.  
 Unit testing ka matlab hai, ki jaise koi API banai hai, usme multiple components hai, like 4 function = 4 conponents, multiple components ki individual testing, is called test driven development.  
 ### JUnit- Java Unit  
+  
+## L 27
+### LOG  
+logging is an essential aspect of application development that allows developers to monitor and troubleshoot their applications.  
+Spring Boot supports various logging frameworks, such as Logback, Log4j2, and Java Util Logging (JUL)  
+### Logback:  
+A popular logging framework that serves as the default in many Spring Boot applications. It offers a flexible configuration and good performance.  
+### Log4j2:  
+Another widely used logging framework with features such as asynchronous logging and support for various output formats.  
+### Java Util Logging (JUL):  
+The default logging framework included in the Java Standard Edition. While it's less feature-rich than some third-party frameworks, it is straightforward and is part of the Java platform.  
+
+Spring Boot comes with a default logging configuration that uses Logback as the default logging implementation. It provides a good balance between simplicity and flexibility.  
+The default configuration is embedded within the Spring Boot libraries, and it may not be visible in your project's source code.  
+If you want to customize the logging configuration, you can create your own logback-spring.xml or logback.xml file in the src/main/resources directory. When Spring Boot detects this file in your project, it will use it instead of the default configuration.  
+### logging levels  
+Logging levels help in categorizing log statements based on their severity. The common logging levels are
+TRACE
+DEBUG
+INFO
+WARN
+ERROR  
+We can set the desired logging level for specific packages or classes, allowing them to control the amount of information logged at runtime.  
+By default, logging is enabled for INFO WARN ERROR  
+Spring Boot provides annotations like @Slf4j & @Log4j2 that you can use to automatically inject logger instances into your classes  
+### Slf4j  
+Simple Logging Facade for Java (SLF4J) provides a Java logging API by means of a simple facade pattern. 
+Slf4j is logging abstraction framework, with help of this we can talk to underlying implementation.  
+Spring Boot allows us to configure logging using properties or YAML files  
+### logback.XML  
+Same can be achieved by XML  
+<configuration>
+    <!-- Appender and Logger configurations go here-->
+</configuration>
+The <configuration> element is the root element of the logback.xml file. All Logback configuration is enclosed within this element.  
