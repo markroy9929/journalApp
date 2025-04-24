@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 28
+Completed till Lecture/Video:  # 29
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 23 April 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 24 April 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -75,7 +75,7 @@ git push -u origin main
   
 > extension Calendar-
 > 23 April: done #27 @ 5pm , learned everything about Logback.xml and Logback,SLF4J...
-> 24 April:
+> 24 April: done #27 @ 5pm , sonarcube kra, sonarlint plugin dala jo SonarQube IDE ho gya, SonarCloud kra github se import
 > 25 April:
 > 26 April:
 > 27 April:
