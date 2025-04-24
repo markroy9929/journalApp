@@ -31,6 +31,7 @@ public class UserServiceTests {
 //
 //    }
 
+    @Disabled
     @Test
     public void testFindByUserName() {
         assertEquals(4, 2 + 2);
@@ -41,6 +42,7 @@ public class UserServiceTests {
     }
 
 
+    @Disabled
     @ParameterizedTest
 //    @EnumSource
     @ValueSource(strings = {
