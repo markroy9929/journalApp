@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 //@Profile("dev")
+// to switch spring security, use with application.yml
 public class SpringSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
