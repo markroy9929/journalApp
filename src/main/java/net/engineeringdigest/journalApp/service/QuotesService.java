@@ -4,10 +4,12 @@ import net.engineeringdigest.journalApp.api.response.QuotesResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-@Slf4j
-@Component
+//@Slf4j
+//@Component
+@Service
 public class QuotesService {
 //    private static final String apiKey = "970L5LdzpYS72f2eMWzSFoXJwBZi1EhPJDrOYqr7ddc68ede";
     private static final String apiKey = "7EEXtdxoFah9xdFCgHwrVUj9DhUZu2spCI3RXaGH85943f17";
@@ -28,7 +30,7 @@ public class QuotesService {
         ResponseEntity<QuotesResponse> response = restTemplate.exchange(API, HttpMethod.GET, entity, QuotesResponse.class);
         response.getStatusCode();
         QuotesResponse body = response.getBody();
-        log.info("QuotesResponse body: " + body);
+//        log.info("QuotesResponse body: " + body);
         return body;
     }
 

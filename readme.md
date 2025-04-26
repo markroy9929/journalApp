@@ -1,7 +1,7 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 31
+Completed till Lecture/Video:  # 33
   
 run daily:
 ```
@@ -77,7 +77,7 @@ git push -u origin main
 > 23 April: done #27 @ 5pm , learned everything about Logback.xml and Logback,SLF4J...  
 > 24 April: done #28 @ 5pm , sonarcube kra, sonarlint plugin dala jo SonarQube IDE ho gya, SonarCloud kra github se import  
 > 25 April: done #29 @ 6pm, Calling External API kra, weather API, Quotes api  
-> 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!  
+> 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!, done #32 @ 6pm pipedream dekha, Elevenlabs kra, curl lagai postman me text to speach, @Service (business logic) kra.
 > 27 April:  
 > 28 April:  
 > 29 April:  
