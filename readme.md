@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 33
+Completed till Lecture/Video:  # 35
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 26 April 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 27 April 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -77,8 +77,8 @@ git push -u origin main
 > 23 April: done #27 @ 5pm , learned everything about Logback.xml and Logback,SLF4J...  
 > 24 April: done #28 @ 5pm , sonarcube kra, sonarlint plugin dala jo SonarQube IDE ho gya, SonarCloud kra github se import  
 > 25 April: done #29 @ 6pm, Calling External API kra, weather API, Quotes api  
-> 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!, done #32 @ 6pm pipedream dekha, Elevenlabs kra, curl lagai postman me text to speach, @Service (business logic) kra.
-> 27 April:  
+> 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!, done #32 @ 6pm pipedream dekha, Elevenlabs kra, curl lagai postman me text to speach, @Service (business logic) kra.  
+> 27 April: done #33 @ 2pm, @Value(${}) annotation class me constants hta kr properties/yml likha, done #34 @ 2pm, @PostConstruct AppCache kra mongoDB se  
 > 28 April:  
 > 29 April:  
 > 30 April:  

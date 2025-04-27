@@ -2,6 +2,7 @@ package net.engineeringdigest.journalApp.service;
 import lombok.extern.slf4j.Slf4j;
 import net.engineeringdigest.journalApp.api.response.QuotesResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -11,14 +12,13 @@ import org.springframework.web.client.RestTemplate;
 //@Component
 @Service
 public class QuotesService {
-//    private static final String apiKey = "970L5LdzpYS72f2eMWzSFoXJwBZi1EhPJDrOYqr7ddc68ede";
-    private static final String apiKey = "7EEXtdxoFah9xdFCgHwrVUj9DhUZu2spCI3RXaGH85943f17";
-
+    @Value("${quotes.api.key}")
+    private String apiKey;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String API = "https://quotes.rest/qod?category=funny";
+    private static final String API = "https://quotes.rest/qod?category=inspire";
 
     public QuotesResponse getQuoteOfTheDay() {
         HttpHeaders headers = new HttpHeaders();
