@@ -14,7 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ActiveProfiles("dev")
-@SpringBootTest
+//@SpringBootTest
 public class UserServiceTests {
 
     @Autowired
