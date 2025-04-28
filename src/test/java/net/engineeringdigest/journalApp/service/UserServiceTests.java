@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles("dev")
+//@ActiveProfiles("dev")
 //@SpringBootTest
 public class UserServiceTests {
 

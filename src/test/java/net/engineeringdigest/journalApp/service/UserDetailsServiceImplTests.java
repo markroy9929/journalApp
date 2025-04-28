@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 import static org.mockito.Mockito.*;
 
-@ActiveProfiles("dev")
+//@ActiveProfiles("dev")
 public class UserDetailsServiceImplTests {
 
     @InjectMocks
