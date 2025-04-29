@@ -7,9 +7,11 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.schema.JsonSchemaObject;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component  // was not added
 public class UserRepositoryImpl {
 
     @Autowired

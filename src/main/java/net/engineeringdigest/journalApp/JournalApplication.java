@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -19,6 +20,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication   // merge of these 3 anotations - @Configuration @EnableAutoConfiguration  @ComponentScan
 @EnableTransactionManagement
+@EnableScheduling
 public class JournalApplication {
 
     public static void main(String[] args) {

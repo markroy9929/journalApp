@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 36
+Completed till Lecture/Video:  # 38
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 28 April 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 29 April 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -80,7 +80,7 @@ git push -u origin main
 > 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!, done #32 @ 6pm pipedream dekha, Elevenlabs kra, curl lagai postman me text to speach, @Service (business logic) kra.  
 > 27 April: done #33 @ 2pm, @Value(${}) annotation class me constants hta kr properties/yml likha, done #34 @ 2pm, @PostConstruct AppCache kra mongoDB se  
 > 28 April: done #35 @ 6pm, MongoTemplate, Criteria, Query kra  
-> 29 April:  
+> 29 April: done #36 @ 7pm, Java mail sender,gmail SMTP kra,done #37 @ 8pm,Scheduling kri Cron se  
 > 30 April:  
 > 1 May:  
 > 2 May:  
