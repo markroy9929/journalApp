@@ -19,14 +19,15 @@ public class UserRepositoryImpl {
 
     public List<User> getUserForSA() {
         Query query = new Query();
+        query.addCriteria(Criteria.where("email").regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,6}$"));
+        query.addCriteria(Criteria.where("sentimentAnalysis").is(true));
+        return mongoTemplate.find(query, User.class);
 //        query.addCriteria(Criteria.where("userName").is("Ankit"));
 //        query.addCriteria(Criteria.where("field").ne("value"));
 //        not equal= ne, less than= lt, less than equal to= lte, greater than= gt, greater than equal to= gte, not in= nin
 //        query.addCriteria(Criteria.where("email").exists(true));
-////        AND
+//        AND
 //        query.addCriteria(Criteria.where("email").ne(null).ne(""));
-        query.addCriteria(Criteria.where("email").regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,6}$"));
-        query.addCriteria(Criteria.where("sentimentAnalysis").is(true));
 //        query.addCriteria(Criteria.where("userName").nin("Rajat","Shanu"));
 //        query.addCriteria(Criteria.where("roles").in("USER","ADMIN"));
 //        query.addCriteria(Criteria.where("sentimentAnalysis").type(JsonSchemaObject.Type.BsonType.BOOLEAN));
@@ -37,7 +38,6 @@ public class UserRepositoryImpl {
 //                Criteria.where("email").exists(true),
 //                Criteria.where("sentimentAnalysis").is(true))
 //        );
-        List<User> users = mongoTemplate.find(query, User.class);
-        return users;
+//        List<User> users = mongoTemplate.find(query, User.class);
     }
 }
