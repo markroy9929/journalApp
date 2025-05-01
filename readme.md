@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 40
+Completed till Lecture/Video:  # 41
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 1 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 2 May 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -83,7 +83,7 @@ git push -u origin main
 > 29 April: done #36 @ 7pm, Java mail sender,gmail SMTP kra,done #37 @ 8pm,Scheduling kri Cron se  
 > 30 April: done #37 @ 6pm, sentiment enum bna diya, aur user scheduler me mail bhej diya  
 > 1 May: done #39 @ 10pm, redis kra wsl pr, StringRedisSerializer kra, weather aur quotes api me lagaya, sudo service redis-server start
-> 2 May:  
+> 2 May: done #40 @ 1am, redis cloud kra, wsl ka redis hata diya  
 > 3 May:  
 > 4 May:  
 > 5 May:  

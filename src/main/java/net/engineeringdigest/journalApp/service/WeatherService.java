@@ -44,6 +44,7 @@ public class WeatherService {
         }
     }
 }
+
 /*
         String finalAPI = appCache.appCache.get(AppCache.keys.WEATHER_API.toString()).replace(PlaceHolders.CITY, city).replace(PlaceHolders.API_KEY, apiKey);
         EXAMPLE TO SHOW POST API CALL

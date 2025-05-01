@@ -11,12 +11,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-//@Slf4j
 //@Component
 @Slf4j
 @Service
 public class QuotesService {
-    @Value("${quotes.api.key}")
+    @Value("${quotes.api.key2}")
     private String apiKey;
 
     @Autowired
@@ -30,6 +29,7 @@ public class QuotesService {
     public QuotesResponse getQuoteOfTheDay() {
         QuotesResponse quotesResponse = redisService.get("QuoteOfTheDay", QuotesResponse.class);
         if (quotesResponse != null) {
+//            log.info("QuotesResponse found in Redis Cloud");
             return quotesResponse;
         } else {
             HttpHeaders headers = new HttpHeaders();
