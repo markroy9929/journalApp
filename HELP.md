@@ -16,6 +16,67 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
 # Notes  
+
+## OLD files
+```java
+package net.engineeringdigest.journalApp;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+// REST API stands for Representational State Transfer Application Programming Interface
+// HTTP verb + URL
+// HTTP verb: GET-read, PUT-modify, POST-create, DELETE     |  URL: endoint localhost:80/netflix/plans
+@RestController
+class MyClass {
+
+    @GetMapping("abc")
+    public String sayHello() {
+        return "Hello";
+    }
+}
+
+
+
+package net.engineeringdigest.journalApp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController  // @Bean bna dega
+public class Car {
+
+    @Autowired  // Dependency injection
+    private Dog dog;  // Field injection
+
+    @GetMapping("/ok")
+    public String ok() {
+        return dog.fun();
+    }
+}
+
+
+
+
+package net.engineeringdigest.journalApp;
+
+import org.springframework.stereotype.Component;
+
+
+// @Bean bna dega, bean ko class pr nahi lagate, @Bean ko function pr lagate hai
+@Component  // IOC container apne paas ye class rakh lega, also known as application context
+public class Dog {
+
+    public String fun(){
+        return "Dog class ke andar fun - something";
+    }
+}
+
+
+```
+
 ## L 10  
 ### ORM  
 Object-Relational Mapping    
