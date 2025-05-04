@@ -5,7 +5,7 @@ Completed till Lecture/Video:  # 41
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 2 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 4 May 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -84,8 +84,8 @@ git push -u origin main
 > 30 April: done #37 @ 6pm, sentiment enum bna diya, aur user scheduler me mail bhej diya  
 > 1 May: done #39 @ 10pm, redis kra wsl pr, StringRedisSerializer kra, weather aur quotes api me lagaya, sudo service redis-server start
 > 2 May: done #40 @ 1am, redis cloud kra, wsl ka redis hata diya  
-> 3 May:  
-> 4 May:  
+> 3 May: kuch ni bs 10 min kafka padha  
+> 4 May: done #41 half video, Kafka ki theory kri, local system pr install run kra, commands , key ordered kra   
 > 5 May:  
 > 6 May:  
 > 7 May:  

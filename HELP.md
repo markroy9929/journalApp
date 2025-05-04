@@ -262,3 +262,79 @@ Same can be achieved by XML
     <!-- Appender and Logger configurations go here-->
 </configuration>
 The <configuration> element is the root element of the logback.xml file. All Logback configuration is enclosed within this element.  
+  
+## L41  
+### Kafka  
+Open-source distributed event streaming platform  
+Kafka is designed to handle data that is constantly being generated and needs to be processed as it comes in, without delays  
+Kafka ensures flow of data from source to destination should be smooth  
+maan lo user like kr re hai, to 1 million per sec direct calls ja ri hai to notification service, maan lo bich me kafka daal diya, ab 1 million call kafka ko jayengi, but vo jo data hai (jo kafka ko diya gaya hai) vo toot jayega (distributed) across multiple servers, aur usko parallelly consume kra jayega, to yaha scalability aur fault tolerance achieve ho rh hai, system decouple ho gaya hai, asynchronous achieve ho rh hai.  
+kafka cluster: group of kafka brokers (1,2,3,4),  
+kafka broker: server on which kafka is running,  
+kafka producer: write new data into kafka cluster,  
+kafka consumer: use krega, data utha lega,  
+zookeper: keeps track of kafka cluster health,  
+kafka connect: import/send data from external entity (db,file,..) (declarative integration, no code written) (source se jayega data kafka cluster ke andar, agar fetch krna hai to sync se jayega sink me) movement of data in or out of kafka cluster,  
+kafka stream: functionalities for data transformation.  
+  
+🟢 INSTALLATION COMMANDS  
+```shell
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+kafka-server-start.bat ..\..\config\server.properties
+
+kafka-topics.bat --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic my-topic
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my-topic --from-beginning
+```
+  
+### Kafka topic  
+Named container for similar events. Unique identifier of a topic is its name.  
+Example: Student topic will have student related data, Food Topic will have food related data.  
+They are like tables in a database.  
+They live inside a broker.  
+Producer produce a message into the topic (ultimately to partitions in round robin fashion) or directly to the partitions. Consumer poll continuously for new messages using the topic name.  
+Partition - A topic is partitioned and distributed to Kafka brokers in round robin fashion to achieve distributed system.  
+Replication factor - A partition is replicated by this factor and it is replicated in another broker to prevent fault tolerance.  
+
+### Partitions  
+topic is split into several parts which are known as the partitions of the topic.  
+Partitions is where actually the message is located inside the topic.  
+Therefore, while creating a topic, we need to specify the number of partitions (the number is arbitrary and can be changed later).  
+Each partition is an ordered, immutable sequence of records.  
+Each partition is independent of each other.  
+Each message gets stored into partitions with an incremental id known as its Offset value.  
+Ordering is there only at partition level. (so if data is to be stored in order then do it on same partition)  
+Partition continuously grows (offset increases) as new records are produced.  
+All the records exist in distributed log file.  
+  
+two things - key and value, key is optional  
+We can send message with key or without key.  
+When sending messages with key, ordering will be maintained as they will be in the same partition.  
+Without key we can not guarantee the ordering of message as consumer poll the messages from all the partitions at the same time.  
+  
+🟢 SENDING MESSAGES COMMANDS(key-ordered)  
+```shell
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+kafka-server-start.bat ..\..\config\server.properties
+
+kafka-topics.bat --create --topic foods --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic foods --property "key.separator=-" --property "parse.key=true"
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic foods --from-beginning -property "key.separator=-" --property "print.key=false"
+```
+  
+### CONSUMER OFFSET & CONSUMER GROUPS  
+Consumer Offset: Position of a consumer in a specific partition of a topic. It represents the latest message, consumer has read.  
+When a consumer group reads messages from a topic, each member of the group maintains its own offset and updates it as it consumes messages  
+what is _consumer_offset: _consumer_offset is a built-in topic in Apache Kafka that keeps track of the latest offset committed for each partition of each consumer group.  
+The topic is internal to the Kafka cluster and not meant to be read or written to directly by clients. Instead, the offset information is stored in the topic and updated by the Kafka broker to reflect the position of each consumer in each partition.  
+The information in _consumer_offset is used by Kafka to maintain the reliability of the consumer groups and to ensure that messages are not lost or duplicated.  
+
+There is a separate __consumer_offsets topic created for each consumer group. So if you have 2 consumer groups containing 4 consumers each, you will have a total of 2 __consumer_offsets topics created.  
+The __consumer_offsets topic is used to store the current offset of each consumer in each partition for a given consumer group. Each consumer in the group updates its own offset for the partitions it is assigned in the __consumer_offsets topic, and the group coordinator uses this information to manage the assignment of partitions to consumers and to ensure that each partition is being consumed by exactly one consumer in the group.  
+
