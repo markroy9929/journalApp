@@ -338,3 +338,23 @@ The information in _consumer_offset is used by Kafka to maintain the reliability
 There is a separate __consumer_offsets topic created for each consumer group. So if you have 2 consumer groups containing 4 consumers each, you will have a total of 2 __consumer_offsets topics created.  
 The __consumer_offsets topic is used to store the current offset of each consumer in each partition for a given consumer group. Each consumer in the group updates its own offset for the partitions it is assigned in the __consumer_offsets topic, and the group coordinator uses this information to manage the assignment of partitions to consumers and to ensure that each partition is being consumed by exactly one consumer in the group.  
 
+When a consumer joins a consumer group, it sends a join request to the group coordinator.  
+The group coordinator determines which partitions the consumer should be assigned based on the number of consumers in the group and the current assignment of partitions to consumers.  
+The group coordinator then sends a new assignment of partitions to the consumer, which includes the set of partitions that the consumer is responsible for consuming.  
+The consumer starts consuming data from the assigned partitions.  
+
+It is important to note that consumers in a consumer group are always assigned partitions in a "sticky" fashion, meaning that a consumer will continue to be assigned the same partitions as long as it remains in the group. This allows consumers to maintain their position in the topic and continue processing where they left off, even after a rebalance.  
+  
+### SEGMENTS COMMIT LOG & RETENTION POLICY  
+Segments: set of messages (Segment size: size define kr sakte hai)  
+Commit log: actual data that kafka producer produces
+Retention policy: by partition size(1GB) oldest file will be deleted, time based policy(7days), 7 days old file will be deleted.  
+by default time based retention policy, log.retention.hours=168 (i.e 7 Days)  
+Kafka cluster: Group of kafka brokers
+kafka broker: kafka-server-start.bat ..\..\config\server.properties
+broker.id=0
+broker.id=1
+broker.id=2
+each broker is leader of any 1 partition 
+
+
