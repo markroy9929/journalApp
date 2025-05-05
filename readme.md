@@ -1,11 +1,11 @@
 Hello welcome to my experiment lab
 
 
-Completed till Lecture/Video:  # 42
+Completed till Lecture/Video:  # 43
   
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 5 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 6 May 2025"; git push;
 ```
 
 ## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
@@ -87,7 +87,7 @@ git push -u origin main
 > 3 May: kuch ni bs 10 min kafka padha  
 > 4 May: done #41 half video, Kafka ki theory kri, local system pr install run kra, commands , key ordered kra   
 > 5 May: done #41 @ 2am, implemented kafka email sentimentAnalysis service  
-> 6 May:  
+> 6 May: done #42 @ 1am, JWT Auth kra, login aur spring context holder me JWT kra  
 > 7 May:  
 > 8 May:  
 > 9 May:  
