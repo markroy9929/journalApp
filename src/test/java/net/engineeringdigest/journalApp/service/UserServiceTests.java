@@ -14,7 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.junit.jupiter.api.Assertions.*;
 
 //@ActiveProfiles("dev")
-//@SpringBootTest
+@SpringBootTest
 public class UserServiceTests {
 
     @Autowired
@@ -31,7 +31,7 @@ public class UserServiceTests {
 //
 //    }
 
-    @Disabled
+//    @Disabled
     @Test
     public void testFindByUserName() {
         assertEquals(4, 2 + 2);
@@ -42,7 +42,7 @@ public class UserServiceTests {
     }
 
 
-    @Disabled
+//    @Disabled
     @ParameterizedTest
 //    @EnumSource
     @ValueSource(strings = {
@@ -63,12 +63,12 @@ public class UserServiceTests {
     }
 
 
-    @Disabled
+//    @Disabled
     @ParameterizedTest
     @CsvSource({
             "1,1,2",
             "2,10,12",
-            "3,3,9"
+            "3,3,6"
     })
     public void test(int a, int b, int expected) {
         assertEquals(expected, a + b);

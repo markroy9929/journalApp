@@ -8,13 +8,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 //@ActiveProfiles("dev")
-//@SpringBootTest
+@SpringBootTest
 public class UserRepositoryImpTests {
 
     @Autowired
     private UserRepositoryImpl userRepository;
 
-    @Disabled
+//    @Disabled
     @Test
     public void kuchbhi() {
         Assertions.assertNotNull(userRepository.getUserForSA());

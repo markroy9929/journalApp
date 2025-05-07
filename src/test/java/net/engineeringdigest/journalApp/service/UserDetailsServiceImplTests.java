@@ -33,7 +33,7 @@ public class UserDetailsServiceImplTests {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Disabled
+//    @Disabled
     @Test
     void loadUserByUsernameTest(){
         when(userRepository.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("ram").password("hjjdbhbj").roles(new ArrayList<>()).build());
