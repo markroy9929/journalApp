@@ -33,4 +33,14 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          EMAIL: ${{ secrets.EMAIL }}
+          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_DATABASE: ${{ secrets.MONGODB_DATABASE }}
+          REDIS_URI: ${{ secrets.REDIS_URI }}
+          KAFKA_SERVERS: ${{ secrets.KAFKA_SERVERS }}
+          KAFKA_CONFIG: ${{ secrets.KAFKA_CONFIG }}
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          QUOTES_API_KEY: ${{ secrets.QUOTES_API_KEY }}
+          QUOTES_API_KEY2: ${{ secrets.QUOTES_API_KEY2 }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ankitt20_journalapp
