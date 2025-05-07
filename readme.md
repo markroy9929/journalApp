@@ -1,24 +1,84 @@
-Hello welcome to my experiment lab
-
-
-Completed till Lecture/Video:  # 45
-  
-run daily:
+Hello welcome to my Journal APP and experiment lab  
+This Journal App is built for **production grade quality** and standards, don't believe me ? See the [Source code](src/main/java/net/engineeringdigest/journalApp)  
+Still not satisfied ? See repo on [Sonar Qube Cloud](https://sonarcloud.io/code?id=ankitt20_journalapp)
+# API IS LIVE: ankit.up.railway.app
+Use PostMan to send API Requests to https://ankit.up.railway.app :  
+0. Setup new Environment journalApp, add variable ```domain``` value ```https://ankit.up.railway.app```  
+Add Request:  
+1. Health-check: GET ```{{domain}}/journal/public/health-check```  
+API Response: 200 OK, body: Ok  
+2. SignUp: POST ```{{domain}}/journal/public/signup```  
+API Input body: {   "userName":"ram9",   "password":"ram"   }   
+API Response: 200 OK  
+3. Login: POST ```{{domain}}/journal/public/login```  
+API Response: 200 OK, body: JWT  
+4. Setup received string as new journalApp variable ```JWT```  
+5. Add new journal entry: POST ```{{domain}}/journal/journal```  
+Go to Authorization, select Auth Type Bearer Token, Token is {{JWT}}  
+Input body:  
+```json
+{
+   "title":"hi, I am ram",
+   "content":"good morning",
+   "sentiment": "HAPPY"
+}
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 7 May 2025"; git push;
-```
+API Response: 201 Created, body:  
+> ```json
+> {    "id": {
+>         "timestamp": 1746625245,
+>         "date": "2025-05-07T13:40:45.000+00:00"    },
+>     "title": "I am ram",
+>     "content": "HAHAHAHA",
+>     "date": "2025-05-07T13:40:45.904219329",
+>     "sentiment": "HAPPY" }
+> ```
+6. Add new journal entry: POST ```{{domain}}/journal/journal```
+Change Body  
+API Response: 201 Created, body: ...  
+7. Get All journal Entry: GET ```{{domain}}/journal/journal```  
+API Response: 200 OK, body:  
+> ```json
+> [
+>     {
+>         "id": {
+>             "timestamp": 1746625245,
+>             "date": "2025-05-07T13:40:45.000+00:00"
+>         },
+>         "title": "I am ram",
+>         "content": "HAHAHAHA",
+>         "date": "2025-05-07T13:40:45.904",
+>         "sentiment": "HAPPY"
+>     },
+>     {
+>         "id": {
+>             "timestamp": 1746625603,
+>             "date": "2025-05-07T13:46:43.000+00:00"
+>         },
+>         "title": "mydiary",
+>         "content": "this is my second journal",
+>         "date": "2025-05-07T13:46:43.455",
+>         "sentiment": "HAPPY"
+>     }
+> ]
+> ```
+Please see documentation for more details, all controllers  
+8. Update journal by id: PUT ```{{domain}}/journal/id/67ee715b7eb78e230094a646```  
+9. Get journal by Id: GET ```{{domain}}/journal/id/67ee715b7eb78e230094a646```  
+10. Delete journal by ID: DELETE ```{{domain}}/journal/id/67ee71b77eb78e230094a647```  
+11. User Greetings: GET ```{{domain}}/journal/user```  
+12. Update User: PUT ```{{domain}}/journal/user```  
+13. Delete User: DELETE ```{{domain}}/user```  
+Admin JWT is required for ADMIN API:  
+14. Admin Get All User: GET ```{{domain}}/journal/admin/all-users```  
+15. Admin Clear cache: GET ```{{domain}}/journal/admin/clear-app-cache```  
+16. Admin add admin: POST ```{{domain}}/admin/create-admin-user```  
++more internal...
 
-## [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
-<!-- 
-git init
-git add .
-git commit -m "april 2025"
-git branch -M main
-git remote add origin https://github.com/ankitT20/journalApp.git
-git push -u origin main
- -->
+## Thanks to Vipul Tyagi for this amazing journey
+### [Spring Boot Mastery: From Basics to Advanced](https://www.youtube.com/playlist?list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue)
 
-| # | Video Title |
+| # | Topics Covered |
 |---|-------------|
 | 1 | [What is Spring Boot in Hindi \| The Whys and Hows of this Java Marvel!](https://www.youtube.com/watch?v=1993zSY5UBI) |
 | 2 | [Install Java & IntelliJ on Windows 11](https://www.youtube.com/watch?v=QZWCbxm9G28) |
@@ -68,30 +128,3 @@ git push -u origin main
 | 46 | [How to Integrate Swagger in Spring Boot \| Step-by-Step Tutorial](https://www.youtube.com/watch?v=7QlvGBJ9Tng) |
 | 47 | [OAuth2 in Spring Boot \| How to Add Google Login in Spring Boot \| Complete Tutorial](https://www.youtube.com/watch?v=cRiqZ0j1gEM) |
 
-  
-
-> Course Deadline was 22 April 2025,
-> After extension need to finish by 12 May
-  
-> extension Calendar-  
-> 23 April: done #27 @ 5pm , learned everything about Logback.xml and Logback,SLF4J...  
-> 24 April: done #28 @ 5pm , sonarcube kra, sonarlint plugin dala jo SonarQube IDE ho gya, SonarCloud kra github se import  
-> 25 April: done #29 @ 6pm, Calling External API kra, weather API, Quotes api  
-> 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!, done #32 @ 6pm pipedream dekha, Elevenlabs kra, curl lagai postman me text to speach, @Service (business logic) kra.  
-> 27 April: done #33 @ 2pm, @Value(${}) annotation class me constants hta kr properties/yml likha, done #34 @ 2pm, @PostConstruct AppCache kra mongoDB se  
-> 28 April: done #35 @ 6pm, MongoTemplate, Criteria, Query kra  
-> 29 April: done #36 @ 7pm, Java mail sender,gmail SMTP kra,done #37 @ 8pm,Scheduling kri Cron se  
-> 30 April: done #37 @ 6pm, sentiment enum bna diya, aur user scheduler me mail bhej diya  
-> 1 May: done #39 @ 10pm, redis kra wsl pr, StringRedisSerializer kra, weather aur quotes api me lagaya, sudo service redis-server start
-> 2 May: done #40 @ 1am, redis cloud kra, wsl ka redis hata diya  
-> 3 May: kuch ni bs 10 min kafka padha  
-> 4 May: done #41 half video, Kafka ki theory kri, local system pr install run kra, commands , key ordered kra   
-> 5 May: done #41 @ 2am, implemented kafka email sentimentAnalysis service  
-> 6 May: done #42 @ 1am, JWT Auth kra, login aur spring context holder me JWT kra, done #43 @ 7pm, Kafka Fallback  
-> 7 May: done #44 @ 5pm, application.yml placeholders, railway pr deploy kr rh  
-> 8 May:  
-> 9 May:  
-> 10 May:  
-> 11 May:  
-> 12 May: TO BE FINISHED **  
-  

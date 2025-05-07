@@ -389,3 +389,47 @@ HMACSHA256(
 )
 ```
 JWT is stateless  
+
+
+
+run daily:
+```
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 7 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "API IS LIVE railway 7 May 2025"; git push;
+```
+
+
+<!-- 
+git init
+git add .
+git commit -m "april 2025"
+git branch -M main
+git remote add origin https://github.com/ankitT20/journalApp.git
+git push -u origin main
+ -->
+
+> Course Deadline was 22 April 2025,
+> After extension need to finish by 12 May
+
+> extension Calendar-  
+> 23 April: done #27 @ 5pm , learned everything about Logback.xml and Logback,SLF4J...  
+> 24 April: done #28 @ 5pm , sonarcube kra, sonarlint plugin dala jo SonarQube IDE ho gya, SonarCloud kra github se import  
+> 25 April: done #29 @ 6pm, Calling External API kra, weather API, Quotes api  
+> 26 April: done #30 @ 12pm, Weather API me hi Post ka example kra, I implemented the entire quotes service on my own, works fine now!!, done #32 @ 6pm pipedream dekha, Elevenlabs kra, curl lagai postman me text to speach, @Service (business logic) kra.  
+> 27 April: done #33 @ 2pm, @Value(${}) annotation class me constants hta kr properties/yml likha, done #34 @ 2pm, @PostConstruct AppCache kra mongoDB se  
+> 28 April: done #35 @ 6pm, MongoTemplate, Criteria, Query kra  
+> 29 April: done #36 @ 7pm, Java mail sender,gmail SMTP kra,done #37 @ 8pm,Scheduling kri Cron se  
+> 30 April: done #37 @ 6pm, sentiment enum bna diya, aur user scheduler me mail bhej diya  
+> 1 May: done #39 @ 10pm, redis kra wsl pr, StringRedisSerializer kra, weather aur quotes api me lagaya, sudo service redis-server start
+> 2 May: done #40 @ 1am, redis cloud kra, wsl ka redis hata diya  
+> 3 May: kuch ni bs 10 min kafka padha  
+> 4 May: done #41 half video, Kafka ki theory kri, local system pr install run kra, commands , key ordered kra   
+> 5 May: done #41 @ 2am, implemented kafka email sentimentAnalysis service  
+> 6 May: done #42 @ 1am, JWT Auth kra, login aur spring context holder me JWT kra, done #43 @ 7pm, Kafka Fallback  
+> 7 May: done #44 @ 5pm, application.yml placeholders, railway pr deploy kra  
+> 8 May:  
+> 9 May:  
+> 10 May:  
+> 11 May:  
+> 12 May: TO BE FINISHED **  
+  
