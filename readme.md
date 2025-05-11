@@ -1,8 +1,18 @@
-Hello welcome to my Journal APP and experiment lab  
-This Journal App is built for **production grade quality** and standards, don't believe me ? See the [Source code](src/main/java/net/engineeringdigest/journalApp)  
-Still not satisfied ? See repo on [Sonar Qube Cloud](https://sonarcloud.io/code?id=ankitt20_journalapp)
+# Hello welcome to my Journal APP and experiment lab  
+## This Journal App is built for **production grade quality** and standards, don't believe me ? See the [Source code](src/main/java/net/engineeringdigest/journalApp)  
+### Still not satisfied ? See repo on [Sonar Qube Cloud](https://sonarcloud.io/code?id=ankitt20_journalapp)
 # API IS LIVE: ankit.up.railway.app
 Use PostMan to send API Requests to https://ankit.up.railway.app :  
+## Import PostMan Collection v2.1
+1. Import(Ctrl+O), paste this url:
+```
+https://raw.githubusercontent.com/ankitT20/journalApp/refs/heads/main/journal.postman_collection.json
+```
+2. Setup new Environment journalApp, add variable ```domain``` value ```https://ankit.up.railway.app```  
+3. Go to Public > signup and enter your details. API Response: 200 OK. Go to Login and enter your details. API Response: 200 OK, body: JWT, copy this JWT  
+4. In Environment, add variable ```JWT``` value , paste your JWT  
+Test-Experiment-Build-ENJOY🎉🚀  
+## Manual Method (NOT RECOMMENDED)  
 0. Setup new Environment journalApp, add variable ```domain``` value ```https://ankit.up.railway.app```  
 Add Request:  
 1. Health-check: GET ```{{domain}}/journal/public/health-check```  

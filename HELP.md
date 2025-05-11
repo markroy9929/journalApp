@@ -395,9 +395,8 @@ JWT is stateless
 run daily:
 ```
 c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 7 May 2025"; git push;
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "API IS LIVE railway 7 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "API KushoAI, Swagger 11 May 2025"; git push;
 ```
-
 
 <!-- 
 git init
@@ -427,9 +426,8 @@ git push -u origin main
 > 5 May: done #41 @ 2am, implemented kafka email sentimentAnalysis service  
 > 6 May: done #42 @ 1am, JWT Auth kra, login aur spring context holder me JWT kra, done #43 @ 7pm, Kafka Fallback  
 > 7 May: done #44 @ 5pm, application.yml placeholders, railway pr deploy kra  
-> 8 May:  
-> 9 May:  
-> 10 May:  
-> 11 May:  
-> 12 May: TO BE FINISHED **  
-  
+> 8 May: nothing  
+> 9 May: nothing  
+> 10 May: done #45 @ 4pm, kusho AI se sari api test krdi
+> 11 May: done #46 @ 12pm, Swagger kra  
+> 12 May: done #47 @ -pm, PLAYLIST COMPLETED !!! FINISHED **  

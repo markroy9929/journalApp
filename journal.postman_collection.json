@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "0d55f3e0-e2c0-4a43-a74b-b32afaa1d79b",
+		"name": "SpringBoot journal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43528868"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"mintu\",\r\n    \"password\":\"mintu\",\r\n    \"email\":\"tayalankit20+mintu@gmail.com\",\r\n    \"sentimentAnalysis\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Ram\",\r\n    \"password\":\"Ram123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "greetings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/journal/user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "journal",
+			"item": [
+				{
+					"name": "update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"TOP SECRET\",\r\n    \"content\":\"block your mediocre friends\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/id/67ee715b7eb78e230094a646",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"id",
+								"67ee715b7eb78e230094a646"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new journal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"mydiary\",\r\n    \"content\":\"this is my second journal\",\r\n    \"sentiment\": \"HAPPY\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/journal",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all jour",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"40 march\",\r\n    \"content\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/journal",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get jou by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"40 march\",\r\n    \"content\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/id/67ee715b7eb78e230094a646",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"id",
+								"67ee715b7eb78e230094a646"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/journal/id/67ee71b77eb78e230094a647",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"id",
+								"67ee71b77eb78e230094a647"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/journal/public/health-check",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"public",
+								"health-check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"ram5\",\r\n    \"password\":\"ram\",\r\n    \"email\":\"ram@gmail.com\",\r\n    \"sentimentAnalysis\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/public/signup",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"public",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"ram1\",\r\n    \"password\":\"ram\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/journal/public/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"public",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get-all-users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/journal/admin/all-users",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"admin",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clear cache",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/journal/admin/clear-app-cache",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"admin",
+								"clear-app-cache"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"vipul\",\r\n    \"password\":\"vipul\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/admin/create-admin-user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"admin",
+								"create-admin-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
