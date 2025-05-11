@@ -1,7 +1,7 @@
 # Hello welcome to my Journal APP  
 ### This Journal App is built for **production grade quality** and standards, don't believe me? See the [Source code](src/main/java/net/engineeringdigest/journalApp)     Still not satisfied? See repo on [Sonar Qube Cloud](https://sonarcloud.io/code?id=ankitt20_journalapp)
-# Website(swagger) [See JournalApp Website](https://ankit.up.railway.app/journal/docs)
-## API IS LIVE at ankit.up.railway.app
+# See JournalApp Website [ankit.up.railway.app](https://ankit.up.railway.app/journal)
+### API IS LIVE
 ## Import PostMan Collection v2.1
 Use PostMan to send API Requests to https://ankit.up.railway.app  
 1. Import(Ctrl+O), paste this url:
@@ -85,6 +85,8 @@ Test-Experiment-Build-ENJOY🎉🚀
 > 15. Admin Clear cache: GET ```{{domain}}/journal/admin/clear-app-cache```  
 > 16. Admin add admin: POST ```{{domain}}/admin/create-admin-user```  
 > +more internal...
+  
+# ‎
   
 > [!TIP]
 > ### Thanks to Vipul Tyagi for this amazing journey

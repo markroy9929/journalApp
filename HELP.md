@@ -421,7 +421,11 @@ OpenAPI definition: This is the title of our API documentation. It can be custom
 It scans our Spring Boot application for REST controllers and generates the corresponding API documentation  
 It automatically generates API documentation without additional configuration  
 Springdoc OpenAPI also scans our application for classes that are used as request bodies or response bodies.  
-
+  
+## L 47  
+### OAuth2: Open Authorization 2.0
+new version of OAuth 1.0  
+Sign-in with Google  
 
 ------------------------------------------------------------------------------------------------------------------------
 run daily:
@@ -459,4 +463,4 @@ git push -u origin main
 > 9 May: nothing  
 > 10 May: done #45 @ 4pm, kusho AI se sari api test krdi
 > 11 May: done #46 @ 12pm, Swagger kra  
-> 12 May: done #47 @ -pm, PLAYLIST COMPLETED !!! FINISHED **  
+> 12 May: done #47 @ 5am, PLAYLIST COMPLETED !!! FINISHED **  
