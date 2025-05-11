@@ -55,3 +55,8 @@ quotes:
   api:
     key: ${QUOTES_API_KEY}
     key2: ${QUOTES_API_KEY2}
+
+springdoc:
+  swagger-ui:
+    path: /docs
+

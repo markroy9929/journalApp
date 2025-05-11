@@ -390,14 +390,44 @@ HMACSHA256(
 ```
 JWT is stateless  
 
+## L 46  
+### OpenAPI Specification  
+It defines a standardized format for describing APIs comprehensively  
+### Swagger  
+Tools used to implement the OpenAPI specification  
+Swagger is an open-source framework used for designing, building, documenting, and consuming RESTful APIs. It provides a standardized way to describe the structure of an API, making it easier for developers to understand, integrate, and consume the API.  
+### Springfox  
+Springfox is a Java library used to integrate Swagger with Spring Boot applications. It automatically generates Swagger documentation from your Spring controllers and models.  
+springfox-boot-starter: A starter dependency to quickly set up and integrate Springfox into a Spring Boot project.  
+### Springdoc OpenAPI  
+Springdoc OpenAPI is an alternative to Springfox. It is designed to generate API documentation from Spring Boot applications using the OpenAPI 3 specification, which is the latest iteration of the Swagger specification.  
+springdoc-openapi-ui: A module that integrates Spring Boot applications with Swagger Ul using the OpenAPI 3 specification.  
+| FEATURE            | SPRINGFOX               | SPRINGDOC OPENAPI  |
+| ------------------ | ----------------------- | ------------------ |
+| OPENAPI VERSION    | 2 AND 3                 | 3                  |
+| PERFORMANCE        | LOWER                   | HIGHER             |
+| DEVELOPMENT STATUS | MATURE, BUT LESS ACTIVE | ACTIVE DEVELOPMENT |
+If you are using Spring Boot 3.x then please use below dependency
+```
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+```
+springdoc.swagger-ui.path = /docs  
+```http://localhost:8080/journal/v3/api-docs``` The/v3/api-docs endpoint provides the JSON representation of API's documentation, which can be used by Swagger UI to generate interactive API documentation.  
+OpenAPI definition: This is the title of our API documentation. It can be customized  
+It scans our Spring Boot application for REST controllers and generates the corresponding API documentation  
+It automatically generates API documentation without additional configuration  
+Springdoc OpenAPI also scans our application for classes that are used as request bodies or response bodies.  
 
 
+------------------------------------------------------------------------------------------------------------------------
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 7 May 2025"; git push;
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "API KushoAI, Swagger 11 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 12 May 2025"; git push;
 ```
-
 <!-- 
 git init
 git add .
@@ -406,7 +436,6 @@ git branch -M main
 git remote add origin https://github.com/ankitT20/journalApp.git
 git push -u origin main
  -->
-
 > Course Deadline was 22 April 2025,
 > After extension need to finish by 12 May
 
