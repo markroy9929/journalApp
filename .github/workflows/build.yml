@@ -43,4 +43,6 @@ jobs:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
           QUOTES_API_KEY: ${{ secrets.QUOTES_API_KEY }}
           QUOTES_API_KEY2: ${{ secrets.QUOTES_API_KEY2 }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ankitt20_journalapp
