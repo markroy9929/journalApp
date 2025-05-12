@@ -24,8 +24,8 @@ public class SwaggerConfig {
                         new Info().title("Journal App APIs")
                                 .description("By Ankit")
                 )
-                .servers(Arrays.asList(new Server().url("https://ankit.up.railway.app").description("live"),
-                        new Server().url("http://localhost:8080").description("local")))
+                .servers(Arrays.asList(new Server().url("https://ankit.up.railway.app/journal").description("live"),
+                        new Server().url("http://localhost:8080/journal").description("local")))
                 .tags(Arrays.asList(
                         new Tag().name("Public APIs"),
                         new Tag().name("User APIs"),
