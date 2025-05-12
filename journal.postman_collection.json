@@ -388,6 +388,42 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "google login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/journal/auth/google/callback?code=4/0AUJR-x6FNo_1xql_h5NSyXYUf-RF-PeN0Xlz14m9JJhpjrUZqttJonKQt4ivtbZpvhu3u5MA",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"journal",
+								"auth",
+								"google",
+								"callback"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "4/0AUJR-x6FNo_1xql_h5NSyXYUf-RF-PeN0Xlz14m9JJhpjrUZqttJonKQt4ivtbZpvhu3u5MA"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
