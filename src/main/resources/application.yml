@@ -8,10 +8,6 @@ spring:
             client-secret: ${GOOGLE_CLIENT_SECRET}
   main:
     allow-circular-references: true
-  server:
-    port: ${SERVER_PORT}
-    servlet:
-      context-path: /journal
   redis:
     url: ${REDIS_URI}
   data:
@@ -54,6 +50,11 @@ spring:
       session:
         timeout:
           ms: 45000
+
+server:
+  port: 8080
+  servlet:
+    context-path: /journal
 
 weather:
   api:
