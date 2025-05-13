@@ -15,78 +15,79 @@ Test-Experiment-Build-ENJOY🎉🚀
 ### Manual Method (NOT RECOMMENDED)  
 <details>
 <summary>Click to see the process</summary>
-> [!CAUTION]
-> 0. Setup new Environment journalApp, add variable ```domain``` value ```https://ankit.up.railway.app```  
-> Add Request:  
-> 1. Health-check: GET ```{{domain}}/journal/public/health-check```  
-> API Response: 200 OK, body: Ok  
-> 2. SignUp: POST ```{{domain}}/journal/public/signup```  
-> API Input body: {   "userName":"ram9",   "password":"ram"   }   
-> API Response: 200 OK  
-> 3. Login: POST ```{{domain}}/journal/public/login```  
-> API Response: 200 OK, body: JWT  
-> 4. Setup received string as new journalApp variable ```JWT```  
-> 5. Add new journal entry: POST ```{{domain}}/journal/journal```  
-> Go to Authorization, select Auth Type Bearer Token, Token is {{JWT}}  
-> Input body:  
-> ```json
-> {
->    "title":"hi, I am ram",
->    "content":"good morning",
->    "sentiment": "HAPPY"
-> }
-> ```
-> API Response: 201 Created, body:  
-> ```json
-> {    "id": {
->         "timestamp": 1746625245,
->         "date": "2025-05-07T13:40:45.000+00:00"    },
->     "title": "I am ram",
->     "content": "HAHAHAHA",
->     "date": "2025-05-07T13:40:45.904219329",
->     "sentiment": "HAPPY" }
-> ```
-> 6. Add new journal entry: POST ```{{domain}}/journal/journal```
-> Change Body  
-> API Response: 201 Created, body: ...  
-> 7. Get All journal Entry: GET ```{{domain}}/journal/journal```  
-> API Response: 200 OK, body:  
-> ```json
-> [
->     {
->         "id": {
->             "timestamp": 1746625245,
->             "date": "2025-05-07T13:40:45.000+00:00"
->         },
->         "title": "I am ram",
->         "content": "HAHAHAHA",
->         "date": "2025-05-07T13:40:45.904",
->         "sentiment": "HAPPY"
->     },
->     {
->         "id": {
->             "timestamp": 1746625603,
->             "date": "2025-05-07T13:46:43.000+00:00"
->         },
->         "title": "mydiary",
->         "content": "this is my second journal",
->         "date": "2025-05-07T13:46:43.455",
->         "sentiment": "HAPPY"
->     }
-> ]
-> ```
-> Please see documentation for more details, all controllers  
-> 8. Update journal by id: PUT ```{{domain}}/journal/id/67ee715b7eb78e230094a646```  
-> 9. Get journal by Id: GET ```{{domain}}/journal/id/67ee715b7eb78e230094a646```  
-> 10. Delete journal by ID: DELETE ```{{domain}}/journal/id/67ee71b77eb78e230094a647```  
-> 11. User Greetings: GET ```{{domain}}/journal/user```  
-> 12. Update User: PUT ```{{domain}}/journal/user```  
-> 13. Delete User: DELETE ```{{domain}}/user```  
-> Admin JWT is required for ADMIN API:  
-> 14. Admin Get All User: GET ```{{domain}}/journal/admin/all-users```  
-> 15. Admin Clear cache: GET ```{{domain}}/journal/admin/clear-app-cache```  
-> 16. Admin add admin: POST ```{{domain}}/admin/create-admin-user```  
-> +more internal...
+
+0. Setup new Environment journalApp, add variable ```domain``` value ```https://ankit.up.railway.app```  
+Add Request:  
+1. Health-check: GET ```{{domain}}/journal/public/health-check```  
+API Response: 200 OK, body: Ok  
+2. SignUp: POST ```{{domain}}/journal/public/signup```  
+API Input body: {   "userName":"ram9",   "password":"ram"   }   
+API Response: 200 OK  
+3. Login: POST ```{{domain}}/journal/public/login```  
+API Response: 200 OK, body: JWT  
+4. Setup received string as new journalApp variable ```JWT```  
+5. Add new journal entry: POST ```{{domain}}/journal/journal```  
+Go to Authorization, select Auth Type Bearer Token, Token is {{JWT}}  
+Input body:  
+```json
+{
+   "title":"hi, I am ram",
+   "content":"good morning",
+   "sentiment": "HAPPY"
+}
+```
+API Response: 201 Created, body:  
+```json
+{    "id": {
+        "timestamp": 1746625245,
+        "date": "2025-05-07T13:40:45.000+00:00"    },
+    "title": "I am ram",
+    "content": "HAHAHAHA",
+    "date": "2025-05-07T13:40:45.904219329",
+    "sentiment": "HAPPY" }
+```
+6. Add new journal entry: POST ```{{domain}}/journal/journal```
+Change Body  
+API Response: 201 Created, body: ...  
+7. Get All journal Entry: GET ```{{domain}}/journal/journal```  
+API Response: 200 OK, body:  
+```json
+[
+    {
+        "id": {
+            "timestamp": 1746625245,
+            "date": "2025-05-07T13:40:45.000+00:00"
+        },
+        "title": "I am ram",
+        "content": "HAHAHAHA",
+        "date": "2025-05-07T13:40:45.904",
+        "sentiment": "HAPPY"
+    },
+    {
+        "id": {
+            "timestamp": 1746625603,
+            "date": "2025-05-07T13:46:43.000+00:00"
+        },
+        "title": "mydiary",
+        "content": "this is my second journal",
+        "date": "2025-05-07T13:46:43.455",
+        "sentiment": "HAPPY"
+    }
+]
+```
+Please see documentation for more details, all controllers  
+8. Update journal by id: PUT ```{{domain}}/journal/id/67ee715b7eb78e230094a646```  
+9. Get journal by Id: GET ```{{domain}}/journal/id/67ee715b7eb78e230094a646```  
+10. Delete journal by ID: DELETE ```{{domain}}/journal/id/67ee71b77eb78e230094a647```  
+11. User Greetings: GET ```{{domain}}/journal/user```  
+12. Update User: PUT ```{{domain}}/journal/user```  
+13. Delete User: DELETE ```{{domain}}/user```  
+Admin JWT is required for ADMIN API:  
+14. Admin Get All User: GET ```{{domain}}/journal/admin/all-users```  
+15. Admin Clear cache: GET ```{{domain}}/journal/admin/clear-app-cache```  
+16. Admin add admin: POST ```{{domain}}/admin/create-admin-user```  
++more internal...
+
 </details>
   
 > [!TIP]
