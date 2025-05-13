@@ -13,6 +13,8 @@ https://raw.githubusercontent.com/ankitT20/journalApp/refs/heads/main/journal.po
 4. In Environment, add variable ```JWT``` value , paste your JWT  
 Test-Experiment-Build-ENJOY🎉🚀  
 ### Manual Method (NOT RECOMMENDED)  
+<details>
+<summary>Click to see the process</summary>
 > [!CAUTION]
 > 0. Setup new Environment journalApp, add variable ```domain``` value ```https://ankit.up.railway.app```  
 > Add Request:  
@@ -85,8 +87,7 @@ Test-Experiment-Build-ENJOY🎉🚀
 > 15. Admin Clear cache: GET ```{{domain}}/journal/admin/clear-app-cache```  
 > 16. Admin add admin: POST ```{{domain}}/admin/create-admin-user```  
 > +more internal...
-  
-# ‎
+</details>
   
 > [!TIP]
 > ### Thanks to Vipul Tyagi for this amazing journey
@@ -141,3 +142,5 @@ Test-Experiment-Build-ENJOY🎉🚀
 > | 45 | [Kusho AI: Testing with AI Automation – Faster, Smarter API Tests](https://www.youtube.com/watch?v=f_LiIOytYE4) |
 > | 46 | [How to Integrate Swagger in Spring Boot \| Step-by-Step Tutorial](https://www.youtube.com/watch?v=7QlvGBJ9Tng) |
 > | 47 | [OAuth2 in Spring Boot \| How to Add Google Login in Spring Boot \| Complete Tutorial](https://www.youtube.com/watch?v=cRiqZ0j1gEM) |
+
+# ‎
