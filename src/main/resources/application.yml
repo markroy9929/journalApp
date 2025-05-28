@@ -7,7 +7,8 @@ spring:
             client-id: ${GOOGLE_CLIENT_ID}
             client-secret: ${GOOGLE_CLIENT_SECRET}
   main:
-    allow-circular-references: true
+#    allow-circular-references: true
+    lazy-initialization: true
   redis:
     url: ${REDIS_URI}
   data:
@@ -50,6 +51,8 @@ spring:
       session:
         timeout:
           ms: 45000
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
 
 server:
   port: 8080

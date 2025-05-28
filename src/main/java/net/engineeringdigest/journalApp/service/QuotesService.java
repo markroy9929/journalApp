@@ -11,11 +11,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+
 //@Component
 @Slf4j
 @Service
 public class QuotesService {
-    @Value("${quotes.api.key2}")
+    @Value("${quotes.api.key}")
     private String apiKey;
 
     @Autowired
@@ -29,7 +31,7 @@ public class QuotesService {
     public QuotesResponse getQuoteOfTheDay() {
         QuotesResponse quotesResponse = redisService.get("QuoteOfTheDay", QuotesResponse.class);
         if (quotesResponse != null) {
-//            log.info("QuotesResponse found in Redis Cloud");
+            log.info("QuotesResponse found in Redis Cloud");
             return quotesResponse;
         } else {
             HttpHeaders headers = new HttpHeaders();
@@ -38,14 +40,33 @@ public class QuotesService {
 
             HttpEntity<String> entity = new HttpEntity<>(headers);
 
-            ResponseEntity<QuotesResponse> response = restTemplate.exchange(API, HttpMethod.GET, entity, QuotesResponse.class);
-            response.getStatusCode();
-            QuotesResponse body = response.getBody();
-//            log.info("QuotesResponse body: " + body);
-            if (body != null) {
-                redisService.set("QuoteOfTheDay", body, 900l);
+            try{
+                log.info("API call to Quotes Service");
+                ResponseEntity<QuotesResponse> response = restTemplate.exchange(API, HttpMethod.GET, entity, QuotesResponse.class);
+                response.getStatusCode();
+                QuotesResponse body = response.getBody();
+                log.info("QuotesResponse body: {}", body);
+                if (body != null) {
+                    redisService.set("QuoteOfTheDay", body, 9999l);
+                }
+                return body;
+            } catch (Exception e) {
+                log.error("Failed to fetch quote from API: {}", e.getMessage(), e);
+
+                // Fallback Quote if API fails or response is invalid
+                QuotesResponse fallback = new QuotesResponse();
+                QuotesResponse.Contents contents = new QuotesResponse.Contents();
+                QuotesResponse.Quote quote = new QuotesResponse.Quote();
+                quote.setQuote("Keep going, everything you need will come to you at the perfect time.");
+
+                ArrayList<QuotesResponse.Quote> quoteList = new ArrayList<>();
+                quoteList.add(quote);
+                contents.setQuotes(quoteList);
+                fallback.setContents(contents);
+
+                return fallback;
             }
-            return body;
+
         }
     }
 }

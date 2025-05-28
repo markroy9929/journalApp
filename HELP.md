@@ -430,7 +430,7 @@ Sign-in with Google
 ------------------------------------------------------------------------------------------------------------------------
 run daily:
 ```
-c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit 14 May 2025"; git push;
+c:; cd 'c:\Users\ANKIT\Documents\Intellij\journalApp'; git add -A; git commit -m "additional commit May 2025"; git push;
 ```
 <!-- 
 git init
