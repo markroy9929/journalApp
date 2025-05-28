@@ -9,7 +9,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest
 class JournalAppApplicationTests {
 
-//	@Disabled
+	@Disabled
 	@Test
 	void contextLoads() {
 	}

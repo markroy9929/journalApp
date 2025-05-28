@@ -2,7 +2,7 @@ package net.engineeringdigest.journalApp.service;
 import lombok.extern.slf4j.Slf4j;
 import net.engineeringdigest.journalApp.api.response.QuotesResponse;
 import net.engineeringdigest.journalApp.api.response.WeatherResponse;
-import net.engineeringdigest.journalApp.cache.AppCache;
+
 import net.engineeringdigest.journalApp.constants.PlaceHolders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

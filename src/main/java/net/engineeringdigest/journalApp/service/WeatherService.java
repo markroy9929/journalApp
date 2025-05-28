@@ -2,7 +2,7 @@ package net.engineeringdigest.journalApp.service;
 
 import lombok.extern.slf4j.Slf4j;
 import net.engineeringdigest.journalApp.api.response.WeatherResponse;
-import net.engineeringdigest.journalApp.cache.AppCache;
+
 import net.engineeringdigest.journalApp.constants.PlaceHolders;
 import net.engineeringdigest.journalApp.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +25,11 @@ public class WeatherService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
-    private AppCache appCache;
-
+ 
     @Autowired
     private RedisService redisService;
+
+    WEATHER_API="http://api.weatherstack.com/current?access_key=API_KEY&query=CITY"
 
     public WeatherResponse getWeather(String city) {
         WeatherResponse weatherResponse = redisService.get("weather_of_" + city, WeatherResponse.class);
@@ -37,7 +37,7 @@ public class WeatherService {
             log.info("weatherResponse found in Redis Cloud");
             return weatherResponse;
         } else {
-            String finalAPI = appCache.appCache.get(AppCache.keys.WEATHER_API.toString()).replace(PlaceHolders.CITY, city).replace(PlaceHolders.API_KEY, apiKey);
+            String finalAPI = WEATHER_API.toString()).replace(PlaceHolders.CITY, city).replace(PlaceHolders.API_KEY, apiKey);
             ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
             WeatherResponse body = response.getBody();
             if (body != null) {
@@ -48,25 +48,3 @@ public class WeatherService {
     }
 }
 
-/*
-        String finalAPI = appCache.appCache.get(AppCache.keys.WEATHER_API.toString()).replace(PlaceHolders.CITY, city).replace(PlaceHolders.API_KEY, apiKey);
-        EXAMPLE TO SHOW POST API CALL
-        String requsetBody = "{\n" +
-                "    \"userName\":\"Ram\",\n" +
-                "    \"password\":\"Ram\"\n" +
-                "}  ";
-        HttpEntity<String> httpEntity = new HttpEntity<>(requsetBody);
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.set("key","value");
-        User user = User.builder().userName("Ankit").password("Ankit").build();
-        HttpEntity<User> httpEntity = new HttpEntity<>(user, httpHeaders);
-        ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.POST, httpEntity, WeatherResponse.class);
-
-
-       ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
-       Deserialization: The process of converting JSON response into corresponding java object
-       Serialization: POJO to JSON
-       response.getStatusCode();
-       WeatherResponse body = response.getBody();
-       return body;
-*/
