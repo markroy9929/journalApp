@@ -9,7 +9,7 @@ import net.engineeringdigest.journalApp.repository.UserRepositoryImpl;
 import net.engineeringdigest.journalApp.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
-import org.springframework.kafka.core.KafkaTemplate;
+// import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -32,8 +32,8 @@ public class UserScheduler {
     @Autowired
     private AppCache appCache;
 
-    @Autowired
-    private KafkaTemplate<String, SentimentData> kafkaTemplate;
+    // @Autowired
+    // private KafkaTemplate<String, SentimentData> kafkaTemplate;
 
 //    @Scheduled(cron = "0 * * ? * *")
     @Scheduled(cron = "0 0 9 * * SUN")
