@@ -29,7 +29,7 @@ public class WeatherService {
     @Autowired
     private RedisService redisService;
 
-    WEATHER_API="http://api.weatherstack.com/current?access_key=API_KEY&query=CITY";
+    String WEATHER_API = "http://api.weatherstack.com/current?access_key=API_KEY&query=CITY";
 
     public WeatherResponse getWeather(String city) {
         WeatherResponse weatherResponse = redisService.get("weather_of_" + city, WeatherResponse.class);
