@@ -41,7 +41,6 @@ public class UserController {
             userInDb.setUserName(user.getUserName());
             userInDb.setPassword(user.getPassword());
             userInDb.setEmail(user.getEmail());
-            userInDb.setSentimentAnalysis(user.isSentimentAnalysis());
             userService.saveNewUser(userInDb);
         }
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
