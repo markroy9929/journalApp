@@ -29,7 +29,7 @@ public class WeatherService {
     @Autowired
     private RedisService redisService;
 
-    WEATHER_API="http://api.weatherstack.com/current?access_key=API_KEY&query=CITY"
+    WEATHER_API="http://api.weatherstack.com/current?access_key=API_KEY&query=CITY";
 
     public WeatherResponse getWeather(String city) {
         WeatherResponse weatherResponse = redisService.get("weather_of_" + city, WeatherResponse.class);
@@ -37,7 +37,7 @@ public class WeatherService {
             log.info("weatherResponse found in Redis Cloud");
             return weatherResponse;
         } else {
-            String finalAPI = WEATHER_API.toString()).replace(PlaceHolders.CITY, city).replace(PlaceHolders.API_KEY, apiKey);
+            String finalAPI = WEATHER_API.replace(PlaceHolders.CITY, city).replace(PlaceHolders.API_KEY, apiKey);
             ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
             WeatherResponse body = response.getBody();
             if (body != null) {
